@@ -9,6 +9,26 @@ const routes = [
     name: 'dashboard',
     component: () => import('./../views/Dashboard')
   },
+  {
+    path: '/Projects',
+    name: 'Projects',
+    component: () => import('./../views/Projects') // Add Projects component
+  },
+  // {
+  //   path: '/profile',
+  //   name: 'profile',
+  //   component: () => import('./../views/Profile') // Add Profile component
+  // },
+  // {
+  //   path: '/tasks',
+  //   name: 'tasks',
+  //   component: () => import('./../views/Tasks') // Add Tasks component
+  // },
+  // {
+  //   path: '/teams',
+  //   name: 'teams',
+  //   component: () => import('./../views/Teams') // Add Teams component
+  // }
 ]
 
 const router = new VueRouter({
