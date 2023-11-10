@@ -96,12 +96,12 @@ export default {
       ],
       headers: [
         {
-          text: 'Projects',
+          text: 'Tasks',
           align: 'start',
           sortable: false,
           value: 'name',
         },
-        { text: 'Tasks', value: 'tasks' },
+        { text: 'No.', value: 'tasks' },
         { text: 'Pending', value: 'pending' },
         { text: 'In Process', value: 'Inprocess' },
         { text: 'Completed', value: 'Completed' },

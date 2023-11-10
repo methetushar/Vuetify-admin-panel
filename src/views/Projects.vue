@@ -46,8 +46,13 @@
     <v-snackbar v-model="showErrorSnackbar" color="error">
       Please fill in all required fields.
     </v-snackbar>
-     <apexchart  type="bar" :options="chartOptions" :series="chartData" />
-  </div>
+     
+      <div id="chart">
+        <apexchart type="rangeBar" height="450" :options="chartOptions" :series="series"></apexchart>
+      </div>
+
+        <apexchart type="radialBar" height="390" :options="chartOptions2" :series="series2"></apexchart>
+      </div>
 </template>
 
 <script>
@@ -75,20 +80,285 @@ export default {
         deadline: "",
         team: "",
       },
-       chartOptions: {
-        chart: {
-          type: "bar",
-        },
-        xaxis: {
-          categories: ["Project 1", "Project 2", "Project 3"],
-        },
-      },
-      chartData: [
-        {
-          name: "Deadlines",
-          data: [10, 15, 5],
-        },
-      ],
+      
+      series: [
+            {
+              name: 'Booking.com',
+              data: [
+                {
+                  x: 'Design',
+                  y: [
+                    new Date('2019-03-05').getTime(),
+                    new Date('2019-03-08').getTime()
+                  ]
+                },
+                {
+                  x: 'Code',
+                  y: [
+                    new Date('2019-03-02').getTime(),
+                    new Date('2019-03-05').getTime()
+                  ]
+                },
+                {
+                  x: 'Code',
+                  y: [
+                    new Date('2019-03-05').getTime(),
+                    new Date('2019-03-07').getTime()
+                  ]
+                },
+                {
+                  x: 'Test',
+                  y: [
+                    new Date('2019-03-03').getTime(),
+                    new Date('2019-03-09').getTime()
+                  ]
+                },
+                {
+                  x: 'Test',
+                  y: [
+                    new Date('2019-03-08').getTime(),
+                    new Date('2019-03-11').getTime()
+                  ]
+                },
+                {
+                  x: 'Validation',
+                  y: [
+                    new Date('2019-03-11').getTime(),
+                    new Date('2019-03-16').getTime()
+                  ]
+                },
+                {
+                  x: 'Design',
+                  y: [
+                    new Date('2019-03-01').getTime(),
+                    new Date('2019-03-03').getTime()
+                  ],
+                }
+              ]
+            },
+            {
+              name: 'PMCS',
+              data: [
+                {
+                  x: 'Design',
+                  y: [
+                    new Date('2019-03-02').getTime(),
+                    new Date('2019-03-05').getTime()
+                  ]
+                },
+                {
+                  x: 'Test',
+                  y: [
+                    new Date('2019-03-06').getTime(),
+                    new Date('2019-03-16').getTime()
+                  ],
+                  goals: [
+                    {
+                      name: 'Break',
+                      value: new Date('2019-03-10').getTime(),
+                      strokeColor: '#CD2F2A'
+                    }
+                  ]
+                },
+                {
+                  x: 'Code',
+                  y: [
+                    new Date('2019-03-03').getTime(),
+                    new Date('2019-03-07').getTime()
+                  ]
+                },
+                {
+                  x: 'Deployment',
+                  y: [
+                    new Date('2019-03-20').getTime(),
+                    new Date('2019-03-22').getTime()
+                  ]
+                },
+                {
+                  x: 'Design',
+                  y: [
+                    new Date('2019-03-10').getTime(),
+                    new Date('2019-03-16').getTime()
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'E-care',
+              data: [
+                {
+                  x: 'Design',
+                  y: [
+                    new Date('2019-03-02').getTime(),
+                    new Date('2019-03-05').getTime()
+                  ]
+                },
+                {
+                  x: 'Test',
+                  y: [
+                    new Date('2019-03-06').getTime(),
+                    new Date('2019-03-16').getTime()
+                  ],
+                  goals: [
+                    {
+                      name: 'Break',
+                      value: new Date('2019-03-10').getTime(),
+                      strokeColor: '#CD2F2A'
+                    }
+                  ]
+                },
+                {
+                  x: 'Code',
+                  y: [
+                    new Date('2019-03-03').getTime(),
+                    new Date('2019-03-07').getTime()
+                  ]
+                },
+                {
+                  x: 'Deployment',
+                  y: [
+                    new Date('2019-03-20').getTime(),
+                    new Date('2019-03-22').getTime()
+                  ]
+                },
+                {
+                  x: 'Design',
+                  y: [
+                    new Date('2019-03-10').getTime(),
+                    new Date('2019-03-16').getTime()
+                  ]
+                }
+              ]
+            },
+            {
+              name: 'AHC',
+              data: [
+                {
+                  x: 'Code',
+                  y: [
+                    new Date('2019-03-10').getTime(),
+                    new Date('2019-03-17').getTime()
+                  ]
+                },
+                {
+                  x: 'Validation',
+                  y: [
+                    new Date('2019-03-05').getTime(),
+                    new Date('2019-03-09').getTime()
+                  ],
+                  goals: [
+                    {
+                      name: 'Break',
+                      value: new Date('2019-03-07').getTime(),
+                      strokeColor: '#CD2F2A'
+                    }
+                  ]
+                },
+              ]
+            },
+           
+          ],
+          chartOptions: {
+            chart: {
+              height: 450,
+              type: 'rangeBar'
+            },
+            plotOptions: {
+              bar: {
+                horizontal: true,
+                barHeight: '80%'
+              }
+            },
+            xaxis: {
+              type: 'datetime'
+            },
+            stroke: {
+              width: 1
+            },
+            fill: {
+              type: 'solid',
+              opacity: 0.6
+            },
+            legend: {
+              position: 'top',
+              horizontalAlign: 'left'
+            }
+          },
+          
+          series2: [95, 50, 69, 90],
+          chartOptions2: {
+            chart: {
+              height: 390,
+              type: 'radialBar',
+            },
+            plotOptions2: {
+              radialBar: {
+                offsetY: 0,
+                startAngle: 0,
+                endAngle: 270,
+                hollow: {
+                  margin: 5,
+                  size: '30%',
+                  background: 'transparent',
+                  image: undefined,
+                },
+                dataLabels2: {
+                  name: {
+                    show: false,
+                  },
+                  value: {
+                    show: false,
+                  }
+                }
+              }
+            },
+            colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
+            labels: ['AHC', 'Booking.com', 'PMCS', 'E-care'],
+            legend: {
+              show: true,
+              floating: true,
+              fontSize: '16px',
+              position: 'left',
+              offsetX: 160,
+              offsetY: 15,
+              labels: {
+                useSeriesColors: true,
+              },
+              markers: {
+                size: 0
+              },
+              formatter: function(seriesName, opts) {
+                return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+              },
+              itemMargin: {
+                vertical: 3
+              }
+            },
+            responsive: [{
+              breakpoint: 480,
+              options: {
+                legend: {
+                    show: false
+                }
+              }
+            }]
+          },
+          
+      //  chartOptions: {
+      //   chart: {
+      //     type: "bar",
+      //     // height: "50"
+      //   },
+      //   xaxis: {
+      //     categories: ["Project 1", "Project 2", "Project 3"],
+      //   },
+      // },
+      // chartData: [
+      //   {
+      //     name: "Deadlines",
+      //     data: [10, 15, 5],
+      //   },
+      // ],
     };
   },
   methods: {
@@ -164,4 +434,8 @@ export default {
 .show-error-snackbar {
   background-color: #f44336;
 }
+/* .chart{
+  height: 1000px;
+  width: 700px;
+} */
 </style>

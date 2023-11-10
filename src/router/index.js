@@ -19,11 +19,11 @@ const routes = [
   //   name: 'profile',
   //   component: () => import('./../views/Profile') // Add Profile component
   // },
-  // {
-  //   path: '/tasks',
-  //   name: 'tasks',
-  //   component: () => import('./../views/Tasks') // Add Tasks component
-  // },
+  {
+    path: '/Task',
+    name: 'Task',
+    component: () => import('./../views/Task') // Add Tasks component
+  },
   // {
   //   path: '/teams',
   //   name: 'teams',
