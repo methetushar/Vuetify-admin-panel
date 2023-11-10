@@ -2,11 +2,11 @@
   <div class="Projects">
        <v-container>
       <v-row>
-        <v-col cols="4">
+        <v-col cols="8">
           <!-- Your Sidebar Component -->
           <sidebar />
         </v-col>
-        <v-col cols="11">
+        <v-col cols="12">
           <h1>Projects</h1>
           <!-- "Add Project" button -->
           <v-btn class="add-project-button" @click="addProjectDialog = true">Add Project</v-btn>
@@ -80,7 +80,6 @@ export default {
         deadline: "",
         team: "",
       },
-      
       series: [
             {
               name: 'Booking.com',

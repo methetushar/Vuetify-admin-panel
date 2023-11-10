@@ -13,7 +13,7 @@
           Login Successfully! Welcome to <strong>PMCS</strong>
         </v-alert>
         <v-row>
-          <v-col lg="6" cols="12" v-for="(item, index) in activityLog" :key="index">
+          <v-col lg="8" cols="12" v-for="(item, index) in activityLog" :key="index">
             <v-card elevation="2" class="rounded-lg activity-card " >
               <v-card-text class="d-flex justify-space-between align-center">
                 <div>
