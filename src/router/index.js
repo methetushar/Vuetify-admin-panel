@@ -20,8 +20,8 @@ const routes = [
   //   component: () => import('./../views/Profile') // Add Profile component
   // },
   {
-    path: '/Task',
-    name: 'Task',
+  path: '/task',
+    name: 'task',
     component: () => import('./../views/Task') // Add Tasks component
   },
   // {

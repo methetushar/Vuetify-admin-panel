@@ -1,5 +1,7 @@
 <template>
   <div class="Projects">
+  <v-btn @click="viewTasks(item)">View Tasks</v-btn>
+
        <v-container>
       <v-row>
         <v-col cols="8">
@@ -361,6 +363,14 @@ export default {
     };
   },
   methods: {
+    viewTasks() {
+    // Log the selected project and the list of projects before navigating
+    console.log("Selected Project:", this.projects);
+    console.log("List of Projects:", this.projects);
+    console.log("Number of Projects:", this.projects.length);
+    // Pass the list of projects to the Task page
+    this.$router.push({ name: "task", params: { projectName: this.projects.name,  projects: this.projects } });
+  },
     saveProject() {
       if (!this.newProject.name || !this.newProject.description || !this.newProject.deadline || !this.newProject.team) {
         this.showErrorSnackbar = true;
