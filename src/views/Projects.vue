@@ -39,7 +39,6 @@
       </v-card>
     </v-dialog>
 
-    <!-- Snackbar for success message -->
     <v-snackbar v-model="showSuccessSnackbar" color="success" top>
       Project added successfully!
     </v-snackbar>
@@ -364,11 +363,10 @@ export default {
   },
   methods: {
     viewTasks() {
-    // Log the selected project and the list of projects before navigating
     console.log("Selected Project:", this.projects);
     console.log("List of Projects:", this.projects);
     console.log("Number of Projects:", this.projects.length);
-    // Pass the list of projects to the Task page
+
     this.$router.push({ name: "task", params: { projectName: this.projects.name,  projects: this.projects } });
   },
     saveProject() {

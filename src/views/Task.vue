@@ -25,7 +25,6 @@
               :items="statusOptions"
               label="Status"
             ></v-select>
-
             <v-btn type="submit" color="primary">Save</v-btn>
           </v-form>
         </v-card-text>
@@ -57,7 +56,6 @@ export default {
     };
   },
  created() {
-  // Fetch the list of projects passed from the Projects page
   this.projectList = this.$route.params.projects || [];
 },
   methods: {
@@ -80,7 +78,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 
 </style>
