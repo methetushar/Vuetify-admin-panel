@@ -1,6 +1,6 @@
 <template>
   <div class="Projects">
-  <v-btn @click="viewTasks(item)">View Tasks</v-btn>
+  <v-btn class ="v-button" @click="viewTasks(item)">View Tasks</v-btn>
 
        <v-container>
       <v-row>
@@ -396,8 +396,8 @@ export default {
 
 .add-project-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 32px;
+  right: 25px;
   background-color: #3d9423;
   border: none;
   border-radius: 4px;
@@ -409,7 +409,16 @@ export default {
 .add-project-button:hover {
   background-color: #1daf6b;
 }
-
+.v-button{
+   background-color: #3d9423;
+   border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.v-button:hover {
+  background-color: #1daf6b;
+}
 .dialog-title {
   font-size: 24px;
   font-weight: bold;

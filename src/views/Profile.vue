@@ -71,7 +71,7 @@ export default {
       user: {}, 
       projects: [],
       tasks: [], 
-      project: JSON.parse(localStorage.getItem("projects")) || [], // Initialize from localStorage or as an empty array
+      project: JSON.parse(localStorage.getItem("projects")) || [], 
       headers: [
         { text: "Project Name", value: "name" },
         { text: "Description", value: "description" },
@@ -103,7 +103,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchData(); // Fetch data when the component is mounted
+    this.fetchData();
   },
 };
 </script>
@@ -118,22 +118,27 @@ export default {
 .summary-item {
   text-align: center;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid#ffe2e2;
   border-radius: 8px;
-  background-color: #f0f0f0;
+  background-color: #ffe2e2;;
 }
 .table-container {
   margin-top: 20px;
+  background-color: #d0fcff;
+  fill: #d0fcff;
+  color: #d0fcff;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  background-color: #d0fcff;
+  fill: #d0fcff;
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #a3f9ff;
   padding: 8px;
   text-align: left;
 }
