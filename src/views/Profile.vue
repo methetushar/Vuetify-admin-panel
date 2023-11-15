@@ -28,24 +28,21 @@
   <v-container>
       <v-row>
         <v-col cols="8">
-          <!-- Your Sidebar Component -->
           <sidebar />
         </v-col>
         <v-col cols="12">
           <h1>Projects</h1>
-          <!-- "Add Project" button -->
           <v-data-table :headers="headers" :items="projects"></v-data-table>
         </v-col>
       </v-row>
     </v-container>
-
-    <!-- Tasks Section -->
     <div class="user-tasks">
       <h2>User Tasks</h2>
       <table>
         <thead>
           <tr>
             <th>Title</th>
+            <th>Task no</th>
             <th>Description</th>
             <th>Project</th>
             <th>Priority</th>
