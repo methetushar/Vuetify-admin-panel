@@ -59,6 +59,7 @@
             <td>{{ task.project.name }}</td>
             <td>{{ task.priority }}</td>
             <td>{{ task.deadline }}</td>
+            <td>{{task.pending}}</td>
           </tr>
         </tbody>
       </table>
