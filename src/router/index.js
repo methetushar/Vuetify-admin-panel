@@ -14,11 +14,11 @@ const routes = [
     name: 'Projects',
     component: () => import('./../views/Projects') // Add Projects component
   },
-  // {
-  //   path: '/profile',
-  //   name: 'profile',
-  //   component: () => import('./../views/Profile') // Add Profile component
-  // },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: () => import('./../views/Profile') // Add Profile component
+  },
   {
   path: '/task',
     name: 'task',
