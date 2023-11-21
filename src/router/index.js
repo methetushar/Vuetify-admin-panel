@@ -24,11 +24,11 @@ const routes = [
     name: 'task',
     component: () => import('./../views/Task') // Add Tasks component
   },
-  // {
-  //   path: '/teams',
-  //   name: 'teams',
-  //   component: () => import('./../views/Teams') // Add Teams component
-  // }
+  {
+    path: '/teams',
+    name: 'teams',
+    component: () => import('./../views/Teams') // Add Teams component
+  }
 ]
 
 const router = new VueRouter({

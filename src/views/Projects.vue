@@ -67,7 +67,7 @@ export default {
     return {
       showSuccessSnackbar: false,
       showErrorSnackbar: false,
-      projects: JSON.parse(localStorage.getItem("projects")) || [], // Initialize from localStorage or as an empty array
+      projects: JSON.parse(localStorage.getItem("projects")) || [], // Initialize from localStorage (runs of 8081 only)
       headers: [
         { text: "Project Name", value: "name" },
         { text: "Description", value: "description" },
